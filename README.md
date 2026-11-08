@@ -103,10 +103,10 @@ Users can enter the numerical features of a dry bean observation and obtain a pr
 ## Team Members
 
 | Name | Contributions |
-|---|---|
-| Tianying Chen | Data cleaning, EDA, feature analysis, project coordination |
-| Linjie Yang | Model implementation, hyperparameter tuning, GitHub and web demo |
-| Elsey Chen | Model evaluation, visualization, comparison, and interpretation |
+|------|---------------|
+| Tianying Chen | Data cleaning, EDA, feature analysis, and project coordination |
+| Linjie Yang | Model implementation, hyperparameter tuning, experimental development, and web application development |
+| Elsey Chen | Model evaluation, visualization, model comparison, result interpretation, GitHub repository management|
 
 ## References
 1. Zhang, C., Bengio, S., Hardt, M., Recht, B., and Vinyals, O. (2017). [Understanding Deep Learning Requires Rethinking Generalization](https://arxiv.org/abs/1611.03530). International Conference on Learning Representations.
