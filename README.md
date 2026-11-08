@@ -1,6 +1,6 @@
 # ECS 171 Group 8: Memorization vs. Generalization
 
-**UC Davis | ECS 171 – Machine Learning | Fall 2026**
+**UC Davis | ECS 171 – Machine Learning | Group 8**
 
 ## Project Overview
 
