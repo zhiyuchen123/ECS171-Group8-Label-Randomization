@@ -69,25 +69,20 @@ pip install -r requirements.txt
 
 ## Reproducing the Experiments
 
-Launch Jupyter Notebook:
+The notebook automatically downloads the UCI Dry Bean dataset and performs data preprocessing, exploratory data analysis, feature selection, model training, hyperparameter tuning, label-randomization experiments, and model evaluation.
 
-```bash
-jupyter notebook
-```
+Running the notebook generates experimental results, figures, and the trained model in the `outputs_notebook/` directory.
 
-Open `ECS171_Group8_Project.ipynb` and select **Kernel → Restart & Run All**.
+For convenience, selected results and visualizations are also included in the root directory of this GitHub repository.
 
-The notebook automatically downloads the Dry Bean dataset and performs data preprocessing, EDA, feature selection, model training, hyperparameter tuning, label-randomization experiments, and evaluation.
+Key output files include:
 
-Generated results, figures, and the selected model are saved in `outputs_notebook/`.
-
-Important outputs include:
-
-- `all_experiments.csv` – Results from 45 experiments
-- `summary_by_noise.csv` – Aggregated model comparisons
-- `macro_f1_vs_noise.png` – Generalization performance
-- `best_model.joblib` – Saved final model
-
+- `all_experiments.csv` – Results from 45 experimental runs.
+- `summary_by_noise.csv` – Aggregated performance across noise levels.
+- `hyperparameter_tuning.csv` – Hyperparameter tuning results.
+- `macro_f1_vs_noise.png` – Generalization performance under label randomization.
+- `best_clean_confusion_matrix.png` – Confusion matrix of the selected model.
+- `best_model.joblib` – Saved final classification model.
 ## Web Demo
 
 The web application demonstrates the prediction workflow:
