@@ -75,7 +75,7 @@ Launch Jupyter Notebook:
 jupyter notebook
 ```
 
-Open `ECS171_Group8_Project(3).ipynb` and select **Kernel → Restart & Run All**.
+Open `ECS171_Group8_Project.ipynb` and select **Kernel → Restart & Run All**.
 
 The notebook automatically downloads the Dry Bean dataset and performs data preprocessing, EDA, feature selection, model training, hyperparameter tuning, label-randomization experiments, and evaluation.
 
