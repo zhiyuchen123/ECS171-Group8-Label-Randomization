@@ -107,6 +107,10 @@ Users can enter the numerical features of a dry bean observation and obtain a pr
 | Elsey Chen | Model evaluation, visualization, comparison, and interpretation |
 
 ## References
+1. Zhang, C., Bengio, S., Hardt, M., Recht, B., and Vinyals, O. (2017). [Understanding Deep Learning Requires Rethinking Generalization](https://arxiv.org/abs/1611.03530). International Conference on Learning Representations.
 
-1. Zhang et al. (2017). [Understanding Deep Learning Requires Rethinking Generalization](https://arxiv.org/abs/1611.03530).
-2. [UCI Dry Bean Dataset](https://archive.ics.uci.edu/dataset/602/dry+bean+dataset).
+2. UCI Machine Learning Repository. (2020). [Dry Bean Dataset](https://archive.ics.uci.edu/dataset/602/dry+bean+dataset).
+
+3. Koklu, M., and Ozkan, I. A. (2020). Multiclass classification of dry beans using computer vision and machine learning techniques. *Computers and Electronics in Agriculture*, 174, 105507.
+
+4. Frénay, B., and Verleysen, M. (2014). Classification in the presence of label noise: A survey. *IEEE Transactions on Neural Networks and Learning Systems*, 25(5), 845–869.
