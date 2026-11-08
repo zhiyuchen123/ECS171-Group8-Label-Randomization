@@ -96,7 +96,9 @@ The web application demonstrates the prediction workflow:
 
 Users can enter the numerical features of a dry bean observation and obtain a predicted class.
 
-**Live Demo:** [Add deployment URL here]
+**Live Demo:** Our interactive Dry Bean Classification application is deployed using Streamlit.
+
+[Try the Dry Bean Classifier](https://ecs171-group8-label-randomization-8es2wglcaqgwgqjgvjuxbj.streamlit.app/)
 
 ## Team Members
 
