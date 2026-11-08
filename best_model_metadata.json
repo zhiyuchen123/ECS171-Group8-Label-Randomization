@@ -1,0 +1,14 @@
+{
+  "model": "MLP",
+  "validation_macro_f1": 0.9392907392171652,
+  "classes": [
+    "BARBUNYA",
+    "BOMBAY",
+    "CALI",
+    "DERMASON",
+    "HOROZ",
+    "SEKER",
+    "SIRA"
+  ],
+  "trained_on": "clean training labels"
+}
