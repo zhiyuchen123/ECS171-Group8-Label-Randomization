@@ -64,10 +64,18 @@ cd ECS171-Group8-Label-Randomization
 Install the required packages:
 
 ```bash
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
 ## Reproducing the Experiments
+
+From the repository root, open the notebook:
+
+```bash
+python -m notebook ECS171_Group8_Project.ipynb
+```
+
+Use a kernel from the Python environment where you installed the requirements. Restart the kernel and run all cells from top to bottom. Wait for the final model-saving cell to finish; opening the notebook alone only shows the saved outputs.
 
 The notebook automatically downloads the UCI Dry Bean dataset and performs data preprocessing, exploratory data analysis, feature selection, model training, hyperparameter tuning, label-randomization experiments, and model evaluation.
 
@@ -83,6 +91,39 @@ Key output files include:
 - `macro_f1_vs_noise.png` – Generalization performance under label randomization.
 - `best_clean_confusion_matrix.png` – Confusion matrix of the selected model.
 - `best_model.joblib` – Saved final classification model.
+
+### Using a new run in the demo
+
+The app reads `best_model.joblib` and `summary_by_noise.csv` from the repository root, not from `outputs_notebook/`. To use a completed new run, stop the local app and copy the new files to the root. Copy the matching experiment records and figures too, so they stay together.
+
+On macOS or Linux, run this from the repository root after the notebook finishes:
+
+```bash
+cp outputs_notebook/best_model.joblib \
+   outputs_notebook/best_model_metadata.json \
+   outputs_notebook/all_experiments.csv \
+   outputs_notebook/summary_by_noise.csv \
+   outputs_notebook/hyperparameter_tuning.csv \
+   outputs_notebook/*.png .
+```
+
+This replaces the saved files in the root with the new run. Skip this step if you want to keep using the results already included in the repository. Run the tests below after copying, then restart the app so its cached model and results are reloaded. Copying files locally does not update the hosted demo; that requires updating its connected deployment repository.
+
+## Tests
+
+Run all tests from the repository root:
+
+```bash
+python -m unittest discover -s tests -p 'test_*.py' -v
+```
+
+- [Data quality](tests/test_data_quality.py): duplicate removal, missing values, feature columns, and classes.
+- [Preprocessing](tests/test_preprocessing.py): split overlap, label alignment, and training-only preprocessing.
+- [Label randomization](tests/test_label_randomization.py): reproducibility, unchanged input labels, and the random redraw rule.
+- [Experiment results](tests/test_experiment_results.py): complete experiment combinations, recorded noise fractions, metric ranges, and summary means and standard deviations.
+
+The data and preprocessing tests need the UCI dataset; see [tests/README.md](tests/README.md) for the download and offline options. These tests do not rerun the full model experiments or verify the saved demo model's predictions.
+
 ## Web Demo
 
 The web application demonstrates the prediction workflow:
@@ -90,6 +131,14 @@ The web application demonstrates the prediction workflow:
 **Input Features → Trained Model → Predicted Bean Class**
 
 Users can enter the numerical features of a dry bean observation and obtain a predicted class.
+
+To run the app locally, use the same Python environment as above and run this from the repository root:
+
+```bash
+python -m streamlit run app.py
+```
+
+Open the local URL printed in the terminal. The app uses the saved model and results, so you do not need to retrain before trying it. Press `Ctrl+C` in the terminal to stop it.
 
 **Live Demo:** Our interactive Dry Bean Classification application is deployed using Streamlit.
 
@@ -99,7 +148,7 @@ Users can enter the numerical features of a dry bean observation and obtain a pr
 
 | Name | Contributions |
 |------|---------------|
-| Tianying Chen | Data cleaning, EDA, feature analysis, and project coordination |
+| Tianying Chen | Data cleaning, EDA, feature analysis, project coordination, and [tests](tests/) for data quality, preprocessing, label randomization, and experiment result consistency |
 | Linjie Yang | Model implementation, hyperparameter tuning, experimental development, and web application development |
 | Elsey Chen | Model evaluation, visualization, model comparison, result interpretation, GitHub repository management|
 
